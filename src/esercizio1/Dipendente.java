@@ -1,12 +1,12 @@
 package esercizio1;
 
-public class Dipendente {
+public abstract class  Dipendente implements Check{
 
     private String matricola;
     private double stipendio;
     private Dipartimenti dipartimento;
 
-    public Dipendente(double stipendio, String matricola, Dipartimenti dipartimento) {
+    public  Dipendente(double stipendio, String matricola, Dipartimenti dipartimento) {
         this.stipendio = stipendio;
         this.matricola = matricola;
         this.dipartimento = dipartimento;
@@ -28,6 +28,8 @@ public class Dipendente {
         this.dipartimento = dipartimento;
     }
 
+    public abstract double calculateSalary();
+
     @Override
     public String toString() {
         return "Dipendente{" +
@@ -35,5 +37,15 @@ public class Dipendente {
                 "\n stipendio=" + stipendio +
                 "\n dipartimento=" + dipartimento +
                 '}';
+    }
+
+    @Override
+    public void checkIn() {
+        System.out.println("\nturno di " + this.matricola + " iniziato");
+    }
+
+    @Override
+    public void checkOut() {
+        System.out.println("\nturno di " + this.matricola + " terminato");
     }
 }
