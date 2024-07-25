@@ -105,11 +105,23 @@ public class Main {
                     }
                 }
 
+            } else if (risposta.toLowerCase().equals("no")) {
+                System.out.println("Fammi sapere quando vuoi iniziare il turno!");
+                break;
             }
         }
 
 
         Volontario v1 = new Volontario("Kayo", 25);
+        Volontario v2 = new Volontario("Lain", 22);
+        Volontario v3 = new Volontario("Gohj", 34);
+
+
+        Check[] tutti = {L, M, R, v1, v2, v3};
+
+        for (Check ognuno : tutti) {
+            ognuno.checkIn();
+        }
 
 
 

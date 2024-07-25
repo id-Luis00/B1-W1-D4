@@ -26,7 +26,7 @@ public class Volontario implements Check {
 
     @Override
     public void checkIn() {
-        System.out.println("turno di " + this.nome + " iniziato");
+        System.out.println("\nturno di " + this.nome + " iniziato");
     }
 
     @Override
